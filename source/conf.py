@@ -12,7 +12,7 @@ release = u'2.x'
 #
 # needs_sphinx = '1.0'
 
-extensions = ['sphinx_inline_tabs', 'sphinx_copybutton']
+extensions = ['sphinx_inline_tabs', 'sphinx_copybutton', 'notfound.extension']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -31,7 +31,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -118,3 +118,8 @@ epub_title = project
 # epub_uid = ''
 
 epub_exclude_files = ['search.html']
+
+notfound_context = {
+    'title': 'Fish not found',
+    'body': "<h1>Page not found</h1>\n\nUnfortunately we couldn't find the content you were looking for.",
+}
